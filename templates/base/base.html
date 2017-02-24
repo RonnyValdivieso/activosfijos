@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>{% block title %} Bienvenido a SAAF {% endblock %}</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/custom.css' %}">
+	<script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+</head>
+<body>
+	{% block header %}
+	<nav class="navbar navbar-default navbar-static-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#"><abbr title="Sistema de Administración de Activos Fijos">SAAF</abbr></a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Inicio</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Activos<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="/activo">Mostrar</a></li>
+							<li><a href="/activo_nuevo">Nuevo</a></li>
+							<li><a href="#">Something else here</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="../navbar-fixed-top/">Cerrar Sesión</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</nav>
+	{% endblock %}
+
+	{% block content %}
+	<h3>Bloque Content</h3>
+	{% endblock %}
+
+	{% block footer %}
+	<h3>Bloque Footer</h3>
+	{% endblock %}
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>

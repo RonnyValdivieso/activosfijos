@@ -1,0 +1,26 @@
+.form-signin {
+	width: 300px;
+	margin: auto;
+}
+input {
+	margin-bottom: 5px;
+}
+.form-signin-heading {
+	text-align: center;
+}
+.header-title {
+	text-align: center;
+}
+abbr:hover {
+	cursor: pointer;
+}
+.activo_nuevo {
+	width: 600px;
+	margin: 20px auto 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.activo_nuevo input {
+
+}
