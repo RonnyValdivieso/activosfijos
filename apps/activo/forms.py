@@ -7,7 +7,7 @@ class ActivoForm(forms.ModelForm):
 		model = Activo
 
 		fields = [
-			'fotografia',
+            'fotografia',
 			'descripcion',
 			'costo',
 			'iva',
@@ -23,7 +23,7 @@ class ActivoForm(forms.ModelForm):
 			'responsable',
 		]
 		labels = {
-			'fotografia': 'Fotografia',
+            'fotografia': 'Fotografia',
 			'descripcion': 'Descripcion',
 			'costo': 'Costo',
 			'iva': 'I.V.A',
@@ -39,7 +39,7 @@ class ActivoForm(forms.ModelForm):
 			'responsable': 'Responsable',
 		}
 		widgets = {
-			'fotografia': forms.FileInput(attrs={'class':'form-control'}),
+            'fotografia': forms.FileInput(attrs={'class':'form-control'}),
 			'descripcion': forms.TextInput(attrs={'class':'form-control'}),
 			'costo': forms.NumberInput(attrs={'class':'form-control'}),
 			'iva': forms.NumberInput(attrs={'class':'form-control'}),

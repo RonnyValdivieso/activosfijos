@@ -4,6 +4,9 @@ from apps.activo.models import Activo
 
 # Create your views here.
 
+def index(request):
+	return render(request, 'activo/index.html')
+
 def activo_mostrar(request):
 	activo = Activo.objects.all()
 	contexto = {'activos':activo}
@@ -15,7 +18,7 @@ def activo_nuevo(request):
 		form = ActivoForm(request.POST)
 		if form.is_valid():
 			form.save()
-		return redirect('activo:mostrar')
+		return redirect('/activo/show.html')
 	else:
 		form = ActivoForm()
 
@@ -29,5 +32,5 @@ def activo_editar(request, id_activo):
 		form = ActivoForm(request.POST, instance=activo)
 		if form.is_valid():
 			form.save()
-		return redirect('activo:mostrar')
+		return redirect('/activo/show.html')
 	return render(request, '/activo/form.html', {'form':form})
