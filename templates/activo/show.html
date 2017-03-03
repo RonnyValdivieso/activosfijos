@@ -5,37 +5,36 @@ SAAF - Activos
 {% block content %}
 <div class="header-title">
     <br/>
-	<h3>Lista de Activos Fijos</h3>
+    <h3><font color="#908F8F">Lista de Activos Fijos Registrados</font></h3>
     <hr/>
 </div>
 <div class="container">
 	<table class="table table-striped">
 		<thead>
 			<tr>
-                
 				<th >#</th>
 				<th>DESCRIPCIÓN</th>
-				<th>Categoría</th>
-				<th>Estado</th>
-				<th>Condición</th>
-				<th>Proveedor</th>
-				<th>Responsable</th>
+				<th>CATEGORÍA</th>
+				<th>ESTADO</th>
+				<th>CONDICIÓN</th>
+				<th>PROVEEDOR</th>
+				<th>RESPONSABLE</th>
 				<th colspan="2" style="text-align: center;">Acciones</th>
 			</tr>
 		</thead>
 		<tbody>
 			{% if activos %}
 				{% for activo in activos %}
-				<tr>
-					<td>{{ activo.id }}</td>
-					<td>{{ activo.descripcion }}</td>
-					<td>{{ activo.categoria }}</td>
-					<td>{{ activo.estado }}</td>
-					<td>{{ activo.condicion }}</td>
-					<td>{{ activo.proveedor }}</td>
-					<td>{{ activo.responsable }}</td>
-					<td class="acciones"><a class="btn btn-primary btn-sm" href="{% url 'activo:editar' activo.id %}">Editar</a><a class="btn btn-danger btn-sm" href="{% url 'activo:eliminar' activo.id %}">Eliminar</a></td>
-				</tr>
+                    <tr>
+                        <td>{{ activo.id }}</td>
+                        <td>{{ activo.descripcion }}</td>
+                        <td>{{ activo.categoria }}</td>
+                        <td>{{ activo.estado }}</td>
+                        <td>{{ activo.condicion }}</td>
+                        <td>{{ activo.proveedor }}</td>
+                        <td>{{ activo.responsable }}</td>
+                        <td class="acciones"><a class="btn btn-success btn-sm" href="{% url 'activo:editar' activo.id %}">Editar</a><a class="btn btn-danger btn-sm" href="{% url 'activo:eliminar' activo.id %}">Eliminar</a></td>
+				    </tr>
 				{% endfor %}
 			{% else %}
 			<h3>No hay registro de activos</h3>
