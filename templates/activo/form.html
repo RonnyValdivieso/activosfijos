@@ -5,12 +5,14 @@ SAAF - Activos
 {% block content %}
 <div>
 	<div class="header-title">
-		<h3>Nuevo Activo</h3>
+        <br>
+		<h3><font color="#908F8F">Registrar Nuevo Activo</font></h3>
+        <hr/>
 	</div>
 	<form class="activo_nuevo" method="post">
-		{% csrf_token %}
-		{{ form.as_p }}
-		<button type="submit">Guardar</button>
+            {% csrf_token %}
+            {{ form.as_p }}
+        <button type="submit">Guardar</button>
 	</form>
 </div>
 {% endblock %}
