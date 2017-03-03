@@ -3,7 +3,6 @@ from apps.activo.forms import ActivoForm
 from activofijo.models import Activo
 
 # Create your views here.
-
 def listar(request):
 	activo = Activo.objects.all()
 	contexto = {'activos':activo}

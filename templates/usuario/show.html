@@ -5,7 +5,7 @@ SAAF - Activos
 {% block content %}
 <div class="header-title">
     <br/>
-	<h3>Lista de Usuarios</h3>
+	<h3>Lista de Activos Fijos</h3>
     <hr/>
 </div>
 <div class="container">
@@ -15,8 +15,9 @@ SAAF - Activos
                 
 				<th >#</th>
 				<th>Usuario</th>
-				<th>Tipo de usuario</th>
 				<th>Nombre</th>
+				<th>Apellido</th>
+				<th>Correo electrónico</th>
 				<th colspan="2" style="text-align: center;">Acciones</th>
 			</tr>
 		</thead>
@@ -25,9 +26,10 @@ SAAF - Activos
 				{% for usuario in usuarios %}
 				<tr>
 					<td>{{ usuario.id }}</td>
-					<td>{{ usuario.user }}</td>
-					<td>{{ usuario.tipo_usuario }}</td>
-					<td>{{ usuario.persona }}</td>
+					<td>{{ usuario.descripcion }}</td>
+					<td>{{ usuario.categoria }}</td>
+					<td>{{ usuario.estado }}</td>
+					<td>{{ usuario.condicion }}</td>
 					<td class="acciones"><a class="btn btn-primary btn-sm" href="{% url 'usuario:editar' usuario.id %}">Editar</a><a class="btn btn-danger btn-sm" href="{% url 'usuario:eliminar' usuario.id %}">Eliminar</a></td>
 				</tr>
 				{% endfor %}

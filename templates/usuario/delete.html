@@ -11,9 +11,9 @@ SAAF - Activos
 	</div>
 	<form class="form-eliminar" method="post">
         {% csrf_token %}
-        <h3>¿Desea eliminar el registro de {{ usuario.descripcion }}?</h3>
+        <h3>¿Desea eliminar el registro de {{ activo.descripcion }}?</h3>
         <button class="btn btn-danger" type="submit">Sí, eliminar</button>
-        <a class="btn btn-default" href="{% url 'usuario:listar' %}">Cancelar</a>
+        <a class="btn btn-default" href="{% url 'activo:listar' %}">Cancelar</a>
 	</form>
 </div>
 {% endblock %}
