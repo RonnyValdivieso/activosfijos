@@ -14,16 +14,16 @@
 	<nav class="navbar navbar-default navbar-static-top">
 		<div class="container">
 			<div class="navbar-header">
-				<a class="navbar-nav" href="#"><abbr title="Sistema de Administración de Activos Fijos"><img alt="Brand" src="../../static/img/enjoy_sm.png"> </abbr></a>
+				<a class="navbar-nav" href="#"><figure><img alt="Brand" src="{% static 'img/enjoy_sm.png' %}"></figure></a>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Inicio</a></li>
+					<li class="active"><a href="/activo">Inicio</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Activos<span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="/activo">Mostrar</a></li>
-							<li><a href="/activo_nuevo">Nuevo</a></li>
+							<li><a href="/activo/nuevo">Nuevo</a></li>
 							<li><a href="#">Something else here</a></li>
 						</ul>
 					</li>

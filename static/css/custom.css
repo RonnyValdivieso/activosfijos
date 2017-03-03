@@ -14,12 +14,24 @@ input {
 abbr:hover {
 	cursor: pointer;
 }
-.activo_nuevo {
+.form-crear {
 	width: 600px;
 	margin: 20px auto 0 auto;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+}
+.form-eliminar, .acciones {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+.form-eliminar * {
+	margin: 5px;
+}
+.acciones {
+	justify-content: space-around;
 }
 th{
     background-color: #F5861E; 
