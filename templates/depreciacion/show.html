@@ -1,0 +1,47 @@
+{% extends 'base/base.html' %}
+{% block title %}
+SAAF - Activos
+{% endblock %}
+{% block content %}
+<div class="header-title">
+    <br/>
+	<h3>Depreciaciones</h3>
+    <hr/>
+</div>
+<div class="container">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+                
+				<th >#</th>
+				<th>Inicio</th>
+				<th>Fin</th>
+				<th>Depreciación acumulada</th>
+				<th>Valor depreciado</th>
+				<th>Período</th>
+				<th>Activo</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% if depreciaciones %}
+				{% for depreciacion in depreciaciones %}
+				<tr>
+					<td>{{ depreciacion.id }}</td>
+					<td>{{ depreciacion.fecha_inicio }}</td>
+					<td>{{ depreciacion.fecha_fin }}</td>
+					<td>{{ depreciacion.depreciacion_acumulada }}</td>
+					<td>{{ depreciacion.valor_depreciado }}</td>
+					<td>{{ depreciacion.periodo }}</td>
+					<td>{{ depreciacion.activo }}</td>
+				</tr>
+				{% endfor %}
+			{% else %}
+			<h3>No hay registro de depreciaciones</h3>
+			{% endif %}
+		</tbody>
+	</table>
+</div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

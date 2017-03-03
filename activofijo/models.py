@@ -20,6 +20,9 @@ class Activo(models.Model):
     condicion = models.ForeignKey('Condicion')
     responsable = models.ForeignKey('Usuario')
 
+    def __str__(self):
+        return '{}'.format(self.descripcion)
+
     class Meta:
         managed = False
         db_table = 'activo'
