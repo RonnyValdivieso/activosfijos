@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from apps.activo.forms import ActivoForm
-from apps.activo.models import Activo
+from activofijo.models import Activo
 
 # Create your views here.
 

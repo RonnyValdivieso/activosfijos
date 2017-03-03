@@ -1,0 +1,43 @@
+{% extends 'base/base.html' %}
+{% block title %}
+SAAF - Activos
+{% endblock %}
+{% block content %}
+<div class="header-title">
+    <br/>
+	<h3>Lista de Usuarios</h3>
+    <hr/>
+</div>
+<div class="container">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+                
+				<th >#</th>
+				<th>Usuario</th>
+				<th>Tipo de usuario</th>
+				<th>Nombre</th>
+				<th colspan="2" style="text-align: center;">Acciones</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% if usuarios %}
+				{% for usuario in usuarios %}
+				<tr>
+					<td>{{ usuario.id }}</td>
+					<td>{{ usuario.user }}</td>
+					<td>{{ usuario.tipo_usuario }}</td>
+					<td>{{ usuario.persona }}</td>
+					<td class="acciones"><a class="btn btn-primary btn-sm" href="{% url 'usuario:editar' usuario.id %}">Editar</a><a class="btn btn-danger btn-sm" href="{% url 'usuario:eliminar' usuario.id %}">Eliminar</a></td>
+				</tr>
+				{% endfor %}
+			{% else %}
+			<h3>No hay registro de usuarios</h3>
+			{% endif %}
+		</tbody>
+	</table>
+</div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
