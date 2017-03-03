@@ -24,12 +24,21 @@
 						<ul class="dropdown-menu">
 							<li><a href="/activo">Mostrar</a></li>
 							<li><a href="/activo/nuevo">Nuevo</a></li>
-							<li><a href="/depreciacion">Depreciación de activos</a></li>
+							<li><a href="/activo/depreciacion">Depreciar</a></li>
 						</ul>
 					</li>
+                    
+                    	<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Usuarios<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="/usuario">Mostrar</a></li>
+							<li><a href="/usuario/nuevo">Nuevo</a></li>
+						</ul>
+					</li>
+                
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="{% url 'logout' %}">Cerrar Sesión</a></li>
+					<li><a href="../navbar-fixed-top/">Cerrar Sesión</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
